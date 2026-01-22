@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* #container{
+        height: 500px;
+        width:500px;
+        background-color: aqua;
+        position: relative;
+        margin-left: 50px;
+    }
+    .box{
+        height: 250px;
+        width: 250px;
+        background-color: blanchedalmond;
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 140px;
+        margin-left: 100px;
+    } */
+     .container{
+        height: 500px;
+        width: 500px;
+        background-color: aqua;
+        position: relative;
+        left: 700px;
+     }
+     .child{
+        width: 300px;
+        height: 300px;
+        background-color: bisque;
+        position: absolute;
+     }
+     .child > p:first-child{
+        background-color: blue;
+     }
+     .child > p:nth-child(2){
+        background-color: blueviolet;
+     }
+     h2>p:nth-child(1){
+        background-color: red;
+     }
+</style>
+<body>
+    <!-- <div id="container">
+        <div class="box">This is the container</div>
+    </div> -->
+    <!-- <div class="container">
+        <div class="child">
+            <p>This is 1st p tag</p>
+            <p>This is 2nd p tag</p>
+            <p>This is 3rd p tag</p>
+        </div>
+    </div> -->
+    <h1>
+        <h2>
+            <p>This is a p tag 1</p>
+            <p>This is a p tag 2</p>
+            <p>This is a p tag 3</p>
+        </h2>
+        <h2>
+            <p>This is a p tag 1</p>
+            <p>This is a p tag 2</p>
+            <p>This is a p tag 3</p>
+        </h2>
+        <h2>
+            <p>This is a p tag 1</p>
+            <p>This is a p tag 2</p>
+            <p>This is a p tag 3</p>
+        </h2>
+    </h1>
+</body>
+</html>
