@@ -3,187 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Sourav Sharma | Full Stack Web Developer</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 1000px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            padding: 35px 40px;
-            border-radius: 12px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        h1 {
-            font-size: 2.6rem;
-            margin-bottom: 5px;
-            color: #222;
-        }
-
-        h3 {
-            margin-top: 0;
-            font-weight: 500;
-            color: #555;
-        }
-
-        h2 {
-            margin-top: 35px;
-            margin-bottom: 10px;
-            color: #222;
-            border-left: 5px solid #0066cc;
-            padding-left: 12px;
-        }
-
-        h4 {
-            margin-bottom: 5px;
-            color: #0066cc;
-        }
-
-        p {
-            margin-top: 5px;
-            color: #444;
-        }
-
-        ul {
-            padding-left: 20px;
-            list-style-type: square;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #e0e0e0;
-            margin: 30px 0;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Contact section spacing */
-        .contact p {
-            margin: 6px 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 25px;
-            }
-
-            h1 {
-                font-size: 2.1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 
 <body>
-
-    <div class="container">
+    <nav class="navbar">
+        <div class="logo">Sourav</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="resume.pdf" class="resume-btn" target="_blank">Resume</a></li>
+        </ul>
+    </nav>
+    <section class="container" id="home">
         <h1>Sourav Sharma</h1>
         <h3>Full Stack Web Developer</h3>
-
         <p>
             I am a passionate Full Stack Web Developer with a strong foundation in frontend
             and backend technologies. I enjoy building responsive web applications and
             solving real-world problems using clean and efficient code.
         </p>
+    </section>
+    <section class="container" id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a Computer Science Engineering student with hands-on experience in
+            full stack development. I enjoy learning new technologies and applying them
+            to solve real-world problems efficiently.
+        </p>
+    </section>
 
-        <hr>
+    <section class="container" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React JS, Tailwind CSS</li>
+            <li>Node.js, MongoDB, SQL</li>
+            <li>Java, C++</li>
+        </ul>
+    </section>
+    <section class="container" id="projects">
+        <h2>Projects</h2>
 
-        <div>
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React JS, Tailwind CSS</li>
-                <li>Node.js, MongoDB, SQL</li>
-                <li>Java, C++</li>
-            </ul>
-        </div>
+        <h4>Smart Home Website</h4>
+        <p>
+            Developed a responsive smart home website using HTML, CSS, JavaScript, and PHP
+            to showcase automation features and device control.
+        </p>
 
-        <hr>
+        <h4>Banking Management System</h4>
+        <p>
+            Java Swing based desktop application implementing data structures
+            for managing customers, transactions, and activity logs.
+        </p>
 
-        <div>
-            <h2>Projects</h2>
+        <h4>Agent Job Portal</h4>
+        <p>
+            Full stack job portal application built using React, Node.js,
+            and Tailwind CSS for job listing and agent management.
+        </p>
+    </section>
+    <section class="container">
+        <h2>Education</h2>
 
-            <h4>Smart Home Website</h4>
-            <p>
-                Developed a responsive smart home website using HTML, CSS, JavaScript,
-                and PHP to showcase automation features and device control.
-            </p>
+        <p>
+            <strong>B.Tech in Computer Science & Engineering</strong><br>
+            Lovely Professional University, Phagwara, Punjab<br>
+            CGPA: 8.67 (Currently Pursuing)
+        </p>
 
-            <h4>Banking Management System</h4>
-            <p>
-                Java Swing based desktop application implementing data structures
-                for managing customers, transactions, and activity logs.
-            </p>
+        <p>
+            <strong>Intermediate</strong><br>
+            Adarsh Vidya Mandir, Bokaro, Jharkhand<br>
+            Percentage: 89%
+        </p>
 
-            <h4>Agent Job Portal</h4>
-            <p>
-                Full stack job portal application built using React, Node.js,
-                and Tailwind CSS for job listing and agent management.
-            </p>
-        </div>
-
-        <hr>
-
-        <div>
-            <h2>Education</h2>
-
-            <p>
-                <strong>B.Tech in Computer Science & Engineering</strong><br>
-                Lovely Professional University, Phagwara, Punjab<br>
-                CGPA: 8.67 (Currently Pursuing)
-            </p>
-
-            <p>
-                <strong>Intermediate</strong><br>
-                Adarsh Vidya Mandir, Bokaro, Jharkhand<br>
-                Percentage: 89%
-            </p>
-
-            <p>
-                <strong>Matriculation</strong><br>
-                Adarsh Vidya Mandir, Bokaro, Jharkhand<br>
-                Percentage: 92%
-            </p>
-        </div>
-
-        <hr>
-
-        <div class="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:souravsharma9142@gmail.com">souravsharma9142@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/Sourav-1210" target="_blank">github.com/Sourav-1210</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sourav1210/" target="_blank">linkedin.com/in/sourav1210</a></p>
-        </div>
-    </div>
+        <p>
+            <strong>Matriculation</strong><br>
+            Adarsh Vidya Mandir, Bokaro, Jharkhand<br>
+            Percentage: 92%
+        </p>
+    </section>
+    <section class="container contact" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:souravsharma9142@gmail.com">souravsharma9142@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Sourav-1210" target="_blank">github.com/Sourav-1210</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sourav1210/" target="_blank">linkedin.com/in/sourav1210</a></p>
+    </section>
 
 </body>
 </html>
