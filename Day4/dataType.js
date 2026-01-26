@@ -96,18 +96,18 @@
 
 // console.log(!null);
 
-let obj = {name: "Sourav"}
-let x = null;
+// let obj = {name: "Sourav"}
+// let x = null;
 
-function check(x){
-    if(x === null){
-        console.log("This is null variable");
-    }else if (x instanceof Object){
-        console.log("This is a object");
-    }else{
-        console.log("Invalid");
-    }
-}
+// function check(x){
+//     if(x === null){
+//         console.log("This is null variable");
+//     }else if (x instanceof Object){
+//         console.log("This is a object");
+//     }else{
+//         console.log("Invalid");
+//     }
+// }
 
-check(x);
-check(obj);
+// check(x);
+// check(obj);
