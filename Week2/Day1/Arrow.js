@@ -155,14 +155,32 @@
 
 // console.log(person?.age?person.age:0);
 
-let product = {
-    name : "Laptop",
-    price : 80000
-}
+// let product = {
+//     name : "Laptop",
+//     price : 80000
+// }
 
-let value = product?.price;
-if(value){
-    console.log(value - (0.1*value));
-}else{
-    console.log("Price not present");
-}
+// let value = product?.price;
+// if(value){
+//     console.log(String(value - (0.1*value).toFixed(2)));
+// }else{
+//     console.log("Price not present");
+// }
+
+// let arr = [1,2,3,4,5,6];
+// console.log(arr.slice(1));
+
+// arr.splice(4,2,0,0)
+// console.log(arr);
+
+let arr = [1,2,3,4,5];
+
+// arr.forEach((value,index)=>{
+//     console.log(index,value);
+// })
+
+arr.forEach((value,index,arr)=>{
+    arr[index] = value*2;
+});
+
+console.log(arr);
