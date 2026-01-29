@@ -109,12 +109,7 @@
 // },{});
 // console.log(freq);
 
-let nums = [1,2,3,4,5];
-function sep((acc,curr)=>{
-    if(curr %2==0){
-        acc.even.push(curr);
-    }
-})
+
 
 
 

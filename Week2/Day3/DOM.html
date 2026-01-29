@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div id="Parent">I am a div tag</div> -->
+    <div id="Parent">
+        <h1 id ="heading">Hello World</h1>
+    </div>
     <p class="red">I am a p tag-1</p>
     <p class="red">I am a p tag-2</p>
     <p class="red">I am a p tag-3</p>
@@ -26,21 +28,22 @@
     // let tag = document.getElementsByTagName("p");
     // console.log(tag)
 
-    let value = document.querySelectorAll(".red");
+    // let value = document.querySelectorAll(".red");
     // console.log(value[1].innerText);
     // let second = value[1];
     // second.innerText = "I am a modified p tag";
     // second.style.color = "red"
     // second.style.fontSize = "50px"
 
-    value.forEach((val,index)=>{
-        if(index%2==0){
-            val.style.color = "red"
-        }else{
-            val.style.color = "green"
-        }
-    })
+    // value.forEach((val,index)=>{
+    //     if(index%2==0){
+    //         val.style.color = "red"
+    //     }else{
+    //         val.style.color = "green"
+    //     }
+    // })
 
     // let val = document.querySelectorAll(".red");
     // console.log(val);
+
 </script>

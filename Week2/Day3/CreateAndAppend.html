@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+    // parent.id = "Parent";
+    
+    // let child = document.createElement("div");
+    // child.innerText = "I am the child of Dom"
+    // parent.innerText = "I am a parent"
+    // parent.innerHTML = "<h1>I am a child of parent</h1>"
+    // document.body.appendChild(parent);
+    // document.body.append(parent,child)
+    
+    // let h1 = document.querySelector("h1");
+    // h1.style.color = "red"
+let container = document.getElementById("container");
+container.style.border = "2px solid red";
+container.style.height = "50vh";
+container.style.width = "100%";
+container.style.display = "flex";
+container.style.justifyContent = "center";
+container.style.alignItems = "center";
+
+let card = document.createElement("div");
+card.style.width = "300px";
+card.style.height = "350px";
+card.style.border = "1px solid #ccc";
+card.style.borderRadius = "12px";
+card.style.overflow = "hidden"; // image card ke bahar na nikle
+card.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
+card.style.fontFamily = "Arial, sans-serif";
+
+// Image
+let img = document.createElement("img");
+img.src = "https://cdn.pixabay.com/photo/2016/11/21/06/53/beautiful-natural-image-1844362_640.jpg";
+img.alt = "Nature image";
+img.style.width = "100%";
+img.style.height = "70%";
+img.style.objectFit = "cover";
+
+// Text
+let h1 = document.createElement("h1");
+h1.innerText = "Nature Card";
+h1.style.fontSize = "18px";
+h1.style.textAlign = "center";
+h1.style.margin = "10px 0";
+
+// Append
+card.append(img, h1);
+container.appendChild(card);
+
+</script>
