@@ -102,12 +102,19 @@
 // let prod = arr.reduce((acc,curr) => acc*curr,1);
 // console.log(prod);
 
-let arr = ["apple","banana","apple","orange","banana","apple"];
-let freq = arr.reduce((acc,curr)=>{
-    acc[curr] = (acc[curr]||0)+1;
-    return acc;
-},{});
-console.log(freq);
+// let arr = ["apple","banana","apple","orange","banana","apple"];
+// let freq = arr.reduce((acc,curr)=>{
+//     acc[curr] = (acc[curr]||0)+1;
+//     return acc;
+// },{});
+// console.log(freq);
+
+let nums = [1,2,3,4,5];
+function sep((acc,curr)=>{
+    if(curr %2==0){
+        acc.even.push(curr);
+    }
+})
 
 
 

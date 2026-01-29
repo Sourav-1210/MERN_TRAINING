@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="Parent">I am a div tag</div> -->
+    <p class="red">I am a p tag-1</p>
+    <p class="red">I am a p tag-2</p>
+    <p class="red">I am a p tag-3</p>
+    <p class="red">I am a p tag-4</p>
+    <p class="red">I am a p tag-5</p>
+</body>
+</html>
+<script>
+    // let div = document.getElementById("Parent")
+    // console.log(div);
+    // div.innerText = "Hi, I am Sourav"
+    // console.log(div.innerText);
+
+    // let ptag = document.getElementsByClassName("red");
+    // console.log(ptag);
+
+    // let tag = document.getElementsByTagName("p");
+    // console.log(tag)
+
+    let value = document.querySelectorAll(".red");
+    // console.log(value[1].innerText);
+    // let second = value[1];
+    // second.innerText = "I am a modified p tag";
+    // second.style.color = "red"
+    // second.style.fontSize = "50px"
+
+    value.forEach((val,index)=>{
+        if(index%2==0){
+            val.style.color = "red"
+        }else{
+            val.style.color = "green"
+        }
+    })
+
+    // let val = document.querySelectorAll(".red");
+    // console.log(val);
+</script>
