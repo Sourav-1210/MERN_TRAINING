@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="handleSubmit(event)">
+            <input type="text" id="name" placeholder="Enter name"><br><br>
+            <input type="text" id="email" placeholder="Enter email"><br><br>
+            <input type="password" id="password" placeholder="Enter password"><br><br>
+            <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+<script>
+    function handleSubmit(e){
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        
+
+    let isValid = true;
+
+    if(!email.includes('@')){
+        console.log("Invalid Email Format");
+        isValid = false;
+    }
+
+    if(password.length < 6){
+        console.log("Password at least 6 characters");
+        isValid = false;
+    }
+
+    if(isValid){
+        let userData = {
+            name: name,
+            email: email,
+            password: password
+        };
+        console.log(userData);
+        alert("Form Submitted");
+    } else {
+        alert("Form submission failed");
+    }
+}
+</script>

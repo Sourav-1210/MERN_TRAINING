@@ -7,13 +7,85 @@
 </head>
 <body>
     <!-- <button onclick="alert('This button is clicked')">Submit</button> -->
-     <div id="parent">This is a body of parent</div>
-     <button onclick="changeColor()">Change Color</button>
+     <!-- <div id="parent">This is a body of parent</div>
+     <button onclick="changeColor()">Change Color</button> -->
+
+     <!-- <div id="container" style="height: 200px; width: 200px; background-color: blue">
+        This is a container
+     </div> -->
+    <!-- <div id="parent" style="height: 300px; width: 300px; background-color: blue; padding: 50px">
+        <div id="child" style="height: 150px; width: 150px; background-color: brown">
+            This is a child
+        </div>
+    </div> -->
+    <!-- <div id="text">I am a text</div>
+    <button onclick="changeText()">Change Text</button> -->
+    <!-- <button onclick="generateList()">Generate List</button>
+    <ul id="items"></ul> -->
+
+    <!-- <input type="text" id="inputText" placeholder="Enter your text" onchange="showText(event)">
+    <p id="outputText"></p> -->
+    <p id="text">This is my text</p>
+    <input id="color" placeholder="Enter your color" onchange="changeColor(event)">
 </body>
 </html>
 <script>
-    function changeColor(){
-        let div = document.getElementById("parent");
-        div.style.backgroundColor = "red";
+    // function changeColor(){
+    //     let div = document.getElementById("parent");
+    //     div.style.backgroundColor = "red";
+    // }
+    // let container = document.getElementById("container");
+    // container.addEventListener("mouseover",()=>{
+    //     container.style.backgroundColor = "red";
+    // })
+    // container.addEventListener("mouseout",()=>{
+    //     container.style.backgroundColor = "blue";
+    // })
+    // let container = document.getElementById("parent");
+    // let child = document.getElementById("child");
+
+    //Event Bubbling
+    // container.addEventListener("click",()=>{
+    //     alert('Parent is Clicked');
+    // })
+    // child.addEventListener("click",(e)=>{
+    //     alert('Child is Clicked');
+    //     e.stopPropagation();
+    // })
+
+    //Event Bubbling
+    // container.addEventListener("click",(e)=>{
+    //     console.log("Parent Element")
+    //     e.stopPropagation();
+    // },true)
+    // child.addEventListener("click",()=>{
+    //     console.log("Child Element")
+    // },true)
+
+    //.parent and .childern method
+    // console.log(container.children);
+    // console.log(container.children[0].innerText);
+
+    // function changeText(){
+    //     let text = document.getElementById("text");
+    //     text.innerText = "I am modified";
+    // }
+    // let fruits = ["apple","banana","guava","pineapple"];
+    // function generateList(){
+    //     let item = document.getElementById("items");
+    //     item.innerHTML = "";
+    //     fruits.forEach((ele)=>{
+    //         let li = document.createElement("li");
+    //         li.innerText = ele;
+    //         item.appendChild(li);
+    //     })
+    // }
+    // function showText(e){
+    //     let output = document.getElementById("outputText");
+    //     output.innerText = e.target.value;
+    // }
+    function changeColor(e){
+        let p = document.getElementById("text")
+        p.style.color = e.target.value;
     }
 </script>
