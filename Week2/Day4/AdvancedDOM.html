@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="alert('This button is clicked')">Submit</button> -->
+     <div id="parent">This is a body of parent</div>
+     <button onclick="changeColor()">Change Color</button>
+</body>
+</html>
+<script>
+    function changeColor(){
+        let div = document.getElementById("parent");
+        div.style.backgroundColor = "red";
+    }
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <!-- <h2>Simple Calculator</h2> -->
+
+    <!-- <input type="number" id="num1" placeholder="Enter first number">
+    <br><br>
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+
+    <h3 id="result"></h3> -->
+</body>
+</html>
+<script>
+    // function add(){
+    //     let a = Number(document.getElementById("num1").value);
+    //     let b = Number(document.getElementById("num2").value);
+    //     document.getElementById("result").innerText = "Result : "+ (a+b);
+    // }
+
+    // function sub(){
+    //     let a = Number(document.getElementById("num1").value);
+    //     let b = Number(document.getElementById("num2").value);
+    //     document.getElementById("result").innerText = "Result : "+ (a-b);
+    // }
+
+    // function mul(){
+    //     let a = Number(document.getElementById("num1").value);
+    //     let b = Number(document.getElementById("num2").value);
+    //     document.getElementById("result").innerText = "Result : "+ (a*b);
+    // }
+
+    // function div(){
+    //     let a = Number(document.getElementById("num1").value);
+    //     let b = Number(document.getElementById("num2").value);
+
+    //     if(b===0){
+    //         document.getElementById("result").innerText = "Cannot divide by zero"
+    //     }
+    //     document.getElementById("result").innerText = "Result : "+ (a/b);
+    // }
+
+    let num1 = Number(prompt("Enter the first num :"));
+    let num2 = Number(prompt("Enter the second num :"));
+    let operator = prompt("Enter the operator (+,-,*,/) :");
+
+    let result;
+    function calculator(a,b,operator){
+        if(operator === "+"){
+            result = a+b;
+        }else if(operator === "-"){
+            result = a-b;
+        }else if(operator === "*"){
+            result = a*b;
+        }else if(operator === "/"){
+            if(b === 0){
+                return "Cannot divide by zero";
+            }else{
+                result = a/b;
+            }
+        }else{
+            return "Invalid Operator"
+        }
+
+        return result;
+    }
+
+    alert("Result : "+calculator(num1,num2,operator));
+    
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let nav = document.createElement("nav");
+    nav.style.backgroundColor = "black";
+    nav.style.padding = "15px";
+    nav.style.display = "flex";
+    nav.style.justifyContent = "center";
+
+    let ul = document.createElement("ul");
+    ul.style.display = "flex";
+    ul.style.gap = "30px";
+    ul.style.margin = "0";
+    ul.style.padding = "0";
+
+    const navLinks = ["Home", "About", "Services", "Contact"];
+
+    // Create 4 links
+    navLinks.forEach((linkText) => {
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        a.innerText = linkText;
+        a.href = "#"
+        a.style.color = "white";
+        a.style.fontSize = "16px";
+
+        li.appendChild(a);
+        ul.appendChild(li);
+    });
+
+    nav.appendChild(ul);
+    document.body.appendChild(nav);
+
+</script>

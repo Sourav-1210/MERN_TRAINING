@@ -25,38 +25,63 @@
     // h1.style.color = "red"
 let container = document.getElementById("container");
 container.style.border = "2px solid red";
-container.style.height = "50vh";
+container.style.height = "auto";
 container.style.width = "100%";
 container.style.display = "flex";
 container.style.justifyContent = "center";
 container.style.alignItems = "center";
+container.style.gap = "20px";
+container.style.padding = "20px";
+container.style.flexWrap = "wrap";
 
-let card = document.createElement("div");
-card.style.width = "300px";
-card.style.height = "350px";
-card.style.border = "1px solid #ccc";
-card.style.borderRadius = "12px";
-card.style.overflow = "hidden"; // image card ke bahar na nikle
-card.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
-card.style.fontFamily = "Arial, sans-serif";
+const cardsData = [
+    {
+        title: "Nature Card 1",
+        image: "https://cdn.pixabay.com/photo/2016/11/21/06/53/beautiful-natural-image-1844362_640.jpg"
+    },
+    {
+        title: "Nature Card 2",
+        image: "https://uploads.sitepoint.com/wp-content/uploads/2016/03/1458289957powerful-images3.jpg"
+    },
+    {
+        title: "Nature Card 3",
+        image: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"
+    },
+    {
+        title: "Nature Card 4",
+        image: "https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg"
+    },
+    {
+        title: "Nature Card 5",
+        image: "https://us.123rf.com/450wm/kotenko/kotenko1304/kotenko130400095/18909232-beautiful-pink-flowers-of-rhododendron-glade-mountain-landscape-bright-sunny-day.jpg?ver=6"
+    }
+];
 
-// Image
-let img = document.createElement("img");
-img.src = "https://cdn.pixabay.com/photo/2016/11/21/06/53/beautiful-natural-image-1844362_640.jpg";
-img.alt = "Nature image";
-img.style.width = "100%";
-img.style.height = "70%";
-img.style.objectFit = "cover";
 
-// Text
-let h1 = document.createElement("h1");
-h1.innerText = "Nature Card";
-h1.style.fontSize = "18px";
-h1.style.textAlign = "center";
-h1.style.margin = "10px 0";
+cardsData.forEach((cardData) => {
+    let card = document.createElement("div");
+    card.style.width = "300px";
+    card.style.height = "350px";
+    card.style.border = "1px solid #ccc";
+    card.style.borderRadius = "12px";
+    card.style.overflow = "hidden"; 
+    card.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
 
-// Append
-card.append(img, h1);
-container.appendChild(card);
+    let img = document.createElement("img");
+    img.src = cardData.image;
+    img.alt = cardData.title;
+    img.style.width = "100%";
+    img.style.height = "70%";
+    img.style.objectFit = "cover";
+
+    let h1 = document.createElement("h1");
+    h1.innerText = cardData.title;
+    h1.style.fontSize = "18px";
+    h1.style.textAlign = "center";
+    h1.style.margin = "10px 0";
+
+    card.append(img, h1);
+    container.appendChild(card);
+});
 
 </script>

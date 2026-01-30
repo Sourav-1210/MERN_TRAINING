@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let div = document.createElement("div");
+    let h1 = document.createElement("h1");
+    h1.innerText = "I am h1 tag"
+    let p = document.createElement("p")
+    p.innerText = "I am a p tag"
+    div.appendChild(h1);
+    div.insertBefore(p,h1);
+    // div.removeChild(h1);
+    document.body.appendChild(div);
+</script>

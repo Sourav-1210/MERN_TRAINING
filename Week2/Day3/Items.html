@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="items" id="1">Text 1</div>
+    <div class="items" id="2">Text 3</div>
+    <div class="items" id="3">Text 2</div>
+    <div class="items" id="4">Text 4</div>
+    <div class="items" id="5">Text 5</div>
+    <div class="items" id="6">Text 6</div>
+    <div class="items" id="7">Text 7</div>
+    <div class="items" id="8">Text 8</div>
+    <div class="items" id="9">Text 9</div>
+    <div class="items" id="10">Text 10</div>
+</body>
+</html>
+<script>
+    let items = document.querySelectorAll(".items");
+    items.forEach((item)=>{
+        console.log(item.id);
+    })
+</script>
