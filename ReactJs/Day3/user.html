@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div id="root">Hello from Dom</div>
+</body>
+<script type="text/babel">
+let root = ReactDOM.createRoot(document.getElementById("root"));
+    function App(){
+        const [users,setUser] = React.useState([
+            {
+                id:1,
+                first_name:"Rahul",
+                last_name:"Sharma",
+                image : "https://img.freepik.com/premium-photo/man-jumping-across-gap-from-one-rock-cling-other_221513-955.jpg?semt=ais_hybrid&w=740&q=80"
+            },
+            {
+                id:2,
+                first_name:"Priya",
+                last_name:"Verma",
+                image : "https://cdn.pixabay.com/photo/2022/08/08/19/36/landscape-7373484_1280.jpg"
+            },
+            {
+                id:3,
+                first_name:"Amit",
+                last_name:"Singh",
+                image : "https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg?fit=fill&w=600&h=400"
+            }
+        ])
+
+        return(
+            <>
+                <h1>This is list of names</h1>
+                <ul>
+                    {users.map((ele)=>(
+                        <li key={ele.id}>{ele.first_name} {ele.last_name}</li>
+                    ))}
+                </ul>
+            </>
+        )
+    }
+    root.render(<App/>)
+</script>
+</html>

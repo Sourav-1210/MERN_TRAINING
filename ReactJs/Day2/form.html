@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div id="root">Hello from Dom</div>
+</body>
+<script type="text/babel">
+let root = ReactDOM.createRoot(document.getElementById("root"));
+
+function userForm(){
+    const [name,setName] = React.useState("Sourav")
+
+    function handleSubmit(e){
+        e.preventDefault();
+        alert(`The user name submitted : ${name}`);
+        setName("Hello from React");
+    }
+
+    return (
+        <>
+            <h1>Simple Form</h1>
+            <form onSubmit = {handleSubmit}>
+                <label>Name of user :</label>
+                <input type="text" placeholder="Enter your name"/>
+            </form>
+        </>
+    )
+}
+
+  
+
+function App() {
+  return <Counter />;
+}
+
+root.render(<App />);
+
+
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div id="root">Hello from Dom</div>
+</body>
+<script type="text/babel">
+let root = ReactDOM.createRoot(document.getElementById("root"));
+    function App(){
+        const [data,setdata] = React.useState([
+            {id:1,item:"Apple"},
+            {id:2,item:"Mango"},
+            {id:3,item:"Banana"},
+            {id:4,item:"Grapes"},
+        ]);
+
+    return (
+        <>
+            <h1>This is the list of data</h1>
+            <ul>
+                {data.map((ele) => (
+                <li key={ele.id}>{ele.item}</li>
+                ))}
+            </ul>
+        </>
+    );
+
+    }
+    root.render(<App/>)
+</script>
+</html>

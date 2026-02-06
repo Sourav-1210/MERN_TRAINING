@@ -34,5 +34,19 @@
     }
     // root.render(Greet());
     root.render(<Greet/>)
+    function Greet({name,age,city}){
+        return(
+            <>
+                <h1>
+                    Hello , I am {name}, My age is {age} and i from city {city}
+                </h1>
+            </>
+        )
+    }
+    function App(){
+        return (
+            <Greet name = "Sourav" age = "21" city = "Bokaro"/>
+        )
+    }
 </script>
 </html>

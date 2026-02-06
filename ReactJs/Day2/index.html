@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">Hello from Dom</div>
+</body>
+<script type="text/babel">
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+let role = "Admin";
+
+// data
+let user = {
+  name: "Shivang",
+  age: 21,
+  city: "Patna"
+};
+
+let admin = {
+  name: "Sourav",
+  age: 21,
+  city: "Bokaro",
+  status: "Active"
+};
+
+// common styles
+const containerStyle = {
+  minHeight: "100vh",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  background: "linear-gradient(135deg, #667eea, #764ba2)",
+  fontFamily: "Poppins, sans-serif"
+};
+
+const cardStyle = {
+  width: "320px",
+  background: "#fff",
+  padding: "25px",
+  borderRadius: "16px",
+  boxShadow: "0 15px 30px rgba(0,0,0,0.2)",
+  textAlign: "center"
+};
+
+const headingStyle = {
+  marginBottom: "15px",
+  color: "#333"
+};
+
+const textStyle = {
+  margin: "8px 0",
+  color: "#555",
+  fontSize: "16px"
+};
+
+// components
+function User({ name, age, city }) {
+  return (
+    <div style={{ ...cardStyle, borderTop: "5px solid #4caf50" }}>
+      <h1 style={headingStyle}>User Profile</h1>
+      <h3 style={textStyle}>Name: {name}</h3>
+      <h3 style={textStyle}>Age: {age}</h3>
+      <h3 style={textStyle}>City: {city}</h3>
+    </div>
+  );
+}
+
+function Admin({ name, age, city }) {
+  return (
+    <div style={{ ...cardStyle, borderTop: "5px solid #ff9800" }}>
+      <h1 style={headingStyle}>Admin Profile</h1>
+      <h3 style={textStyle}>Name: {name}</h3>
+      <h3 style={textStyle}>Age: {age}</h3>
+      <h3 style={textStyle}>City: {city}</h3>
+    </div>
+  );
+}
+
+// render
+root.render(
+  <div style={containerStyle}>
+    {role === "Admin" ? <Admin {...admin} /> : <User {...user} />}
+  </div>
+);
+
+
+</script>
+</html>
