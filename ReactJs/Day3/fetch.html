@@ -15,19 +15,47 @@
 <script type="text/babel">
 let root = ReactDOM.createRoot(document.getElementById("root"));
     function App(){
-        const [data,setData] = React.useState([]);
+        const [movie,setMovie] = React.useState([]);
+        const [movieName,setMovieName] = React.useState([]);
         async function fetchData(){
             let response = await fetch(
-                "https://jsonplaceholder.typicode.com/posts",
+                "https://mern-39daf-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json",
             );
             let result = await response.json();
-            setData(result);
+            const movieArray = Object.entries(result).map((id,movie)=>(
+                {id,movie}
+            ))
+            setMovie(result);
             console.log(result);
+        }
+
+        async function addMovie(){
+            try{
+                let response = await fetch(
+                    "https://mern-39daf-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json",
+                    {
+                        method : "POST",
+                        headers :{
+                            "Content-Type":"application/json"
+                        },
+                        body : JSON.stringify()
+                    }
+                    
+                );
+                let result = await response.json();
+            }catch(error){
+                error;
+            }
         }
         // fetchData();
         return(
             <>
                 <h1>Fetching data from API</h1>
+                <input type="text" value = {movieName}
+                placeholder="Enter the movie name..."
+                onChange={(e)=>setMovieName(e.target.value)}
+                />
+                <button onClick={addMovie}>Add Movie</button>
                 <button onClick={fetchData}>Fetch Data</button>
                 <ul>
                     {data.map((ele,idx)=>(
