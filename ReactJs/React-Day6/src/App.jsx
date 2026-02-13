@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { createContext,useContext, useState } from 'react'
 import './App.css'
+import DataProvider from './context/DataProvider'
+import DataConsumer from './component/DataConsumer'
 
+
+// function Box({children}){
+//   return <div style={{border:"2px solid black",padding:"20px",margin:"10px"}}>
+//     {children}
+//   </div>
+// }
+
+//1. creating a context
+// const userContext = createContext();
 function App() {
-  const [count, setCount] = useState(0)
+  // const [user, setUser] = useState("Sourav");
 
+  //2.provide context
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      {/* <Parent user = {user}/> */}
+      {/* <Box>
+      <h1>Hello from React</h1>
+      <p>I am the p tag</p>
+      </Box>
+      <Box>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste aperiam, ad modi eos, qui molestias adipisci, deleniti facere ab facilis dolorum dicta iusto dolorem harum nemo rem cupiditate quia. Fugiat?
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </Box> */}
+      {/* <userContext.Provider value={{user,setUser}}>
+        <Parent/>
+      </userContext.Provider> */}
+      <h1>Hello From React</h1>
+      <DataProvider>
+        <DataConsumer/>
+      </DataProvider>
     </>
   )
 }
+
+// function Parent(){
+//   // return <Child user = {user}/>;
+//   return <Child/>
+// }
+
+// function Child(){
+//   // return <GrandChild user = {user}/>
+//   return <GrandChild/>
+// }
+
+// function GrandChild(){
+//   //3.consuming the context
+//   const consumer = useContext(userContext);
+//   return <h1>Hello, I am {consumer.user}</h1>
+// }
 
 export default App
